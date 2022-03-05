@@ -37,8 +37,8 @@ const Stack = createNativeStackNavigator();
  function GuestTab() {
   return (
     <Tab.Navigator>
-      <Tab.Screen name="Pilot" component="Pilots" />
-      <Tab.Screen name="Login" component="Login" />
+      <Tab.Screen name="Pilot" component={Pilots} />
+      <Tab.Screen name="Login" component={Login} />
     </Tab.Navigator>
   )
 }
@@ -46,10 +46,10 @@ const Stack = createNativeStackNavigator();
 function UserTab() {
   return (
     <Tab.Navigator>
-      <Tab.Screen name="Pilot" component="Pilots" />
-      <Tab.Screen name="Fav" component="Favorite" />
+      <Tab.Screen name="Pilot" component={Pilots} />
+      <Tab.Screen name="Fav" component={Favorite} />
       <Stack.Screen name="New" component={New} />
-      <Tab.Screen name="Logout" component="Login" />
+      <Tab.Screen name="Logout" component={Login} />
     </Tab.Navigator>
   )
 }
