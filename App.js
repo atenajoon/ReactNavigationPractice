@@ -36,7 +36,7 @@ const Stack = createNativeStackNavigator();
 
  function GuestTab() {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator screenOptions={{headerShown: false}}>
       <Tab.Screen name="Pilot" component={Pilots} />
       <Tab.Screen name="Login" component={Login} />
     </Tab.Navigator>
@@ -45,7 +45,7 @@ const Stack = createNativeStackNavigator();
 
 function UserTab() {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator screenOptions={{headerShown: false}}>
       <Tab.Screen name="Pilot" component={Pilots} />
       <Tab.Screen name="Fav" component={Favorite} />
       <Stack.Screen name="New" component={New} />
@@ -65,8 +65,8 @@ function UserTab() {
  * It's expected to switch between them based on user's context
  */
 export default function App() {
-  const isLoggedIn = false;
-  // const isLoggedIn = true;
+  // const isLoggedIn = false;
+  const isLoggedIn = true;
   return (
     <NavigationContainer>
       {isLoggedIn ? <UserTab /> : <GuestTab />}
