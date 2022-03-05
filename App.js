@@ -11,38 +11,27 @@ import {View, Text, Button} from 'react-native';
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
 
-// my test comment
+// ===================SCREENs=====================
+/**
+ * There are 4 screens:
+ * - Login
+ * - Pilots (which returns a button conditionally based on the isLoggedIn state)
+ * - New (which cotaines a form and onSubmit gets exchanged with the Pilot screen in the NewStack)
+ * - Favorite
+ */
+
+
 // ===================STACKs=====================
 /**
- * GuestStack that is used for both guest and user tabs.
+ * 1. NewStack: contains 2 screens: New, Pilot(isLoggedIn version of Pilot screen)
  */
-function GuestStack() {
-  return (
-    <Stack.Navigator>
-      <Stack.Screen name="Pilots" component={Pilots} />
-      {/* <Stack.Screen name="Logout" component={Login} />  //this should be a sceern */}
-    </Stack.Navigator>
-  );
-}
-//-----------------------------------------
-/**
- * UserStack that is used only for user tab.
- */
-function UserStack() {
-  return (
-    <Stack.Navigator>
-      <Stack.Screen name="Pilots" component={Pilots} />
-      <Stack.Screen name="New" component={New} />
-      <Stack.Screen name="Favorite" component={Favorite} />
-      {/* <Stack.Screen name="Logout" component={Login} />  //this should be a sceern */}
-    </Stack.Navigator>
-  );
-}
-
 
 // ===================TABs=====================
 /**
- * Tab for guest. It consists of two items, pilots stack and login screen
+ * 1. GuestTab: contains 2 screens: Pilots, Login (!isLoggedIn version of Pilot screen)
+ * 2. UserTab: contains 3 screens and 1 stack: 
+ *      - screens: Pilots, Favorite, Login (!isLoggedIn version of Pilot screen)
+ *      - stack: NewStack
  */
 
  function U_Pilots() {
