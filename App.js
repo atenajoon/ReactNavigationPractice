@@ -20,27 +20,34 @@ const Stack = createNativeStackNavigator();
  * - Favorite
  */
 
-
 // ===================STACKs=====================
 /**
  * 1. NewStack: contains 2 screens: New, Pilot(isLoggedIn version of Pilot screen)
  */
 
+function NewStack() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="New" component={New} />
+      <Stack.Screen name="Pilot" component={Pilots} />
+    </Stack.Navigator>
+  );
+}
 // ===================TABs=====================
 /**
  * 1. GuestTab: contains 2 screens: Pilots, Login (!isLoggedIn version of Pilot screen)
- * 2. UserTab: contains 3 screens and 1 stack: 
+ * 2. UserTab: contains 3 screens and 1 stack:
  *      - screens: Pilots, Favorite, Login (!isLoggedIn version of Pilot screen)
  *      - stack: NewStack
  */
 
- function GuestTab() {
+function GuestTab() {
   return (
     <Tab.Navigator screenOptions={{headerShown: false}}>
       <Tab.Screen name="Pilot" component={Pilots} />
       <Tab.Screen name="Login" component={Login} />
     </Tab.Navigator>
-  )
+  );
 }
 
 function UserTab() {
@@ -48,12 +55,11 @@ function UserTab() {
     <Tab.Navigator screenOptions={{headerShown: false}}>
       <Tab.Screen name="Pilot" component={Pilots} />
       <Tab.Screen name="Fav" component={Favorite} />
-      <Stack.Screen name="New" component={New} />
+      <Stack.Screen name="New" component={NewStack} />
       <Tab.Screen name="Logout" component={Login} />
     </Tab.Navigator>
-  )
+  );
 }
-
 
 //-----------------------------------------
 /**
