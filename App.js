@@ -34,6 +34,28 @@ const Stack = createNativeStackNavigator();
  *      - stack: NewStack
  */
 
+ function GuestTab() {
+  return (
+    <Tab.Navigator>
+      <Tab.Screen name="Pilot" component="Pilots" />
+      <Tab.Screen name="Login" component="Login" />
+    </Tab.Navigator>
+  )
+}
+
+function UserTab() {
+  return (
+    <Tab.Navigator>
+      <Tab.Screen name="Pilot" component="Pilots" />
+      <Tab.Screen name="Fav" component="Favorite" />
+      <Stack.Screen name="New" component={New} />
+      <Tab.Screen name="Logout" component="Login" />
+    </Tab.Navigator>
+  )
+}
+
+
+
  function U_Pilots() {
   return (
     <Tab.Navigator>
