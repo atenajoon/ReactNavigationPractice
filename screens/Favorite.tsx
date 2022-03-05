@@ -11,7 +11,7 @@ export default function Favorite({navigation}) {
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
       <Text>Hi From User FavoriteScreen</Text>
-      <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+      {/* <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
         <Button title="Pilots" onPress={() => navigation.navigate('Pilots')} />
         <Button title="New" onPress={() => navigation.navigate('New')} />
         <Button
@@ -19,7 +19,7 @@ export default function Favorite({navigation}) {
           onPress={() => navigation.navigate('Favorite')}
         />
         <Button title="Logout" onPress={() => navigation.navigate('Login')} />
-      </View>
+      </View> */}
     </View>
   );
 }
