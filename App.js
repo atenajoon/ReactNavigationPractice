@@ -63,10 +63,6 @@ function UserTab() {
 
 //-----------------------------------------
 /**
- * Tab for user. It consists of four items, pilots, Favorite, New stacks and the Logout screen.
- */
-//-----------------------------------------
-/**
  * Parent component that contains tabs.
  * It's expected to switch between them based on user's context
  */
